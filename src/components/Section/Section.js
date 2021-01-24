@@ -1,4 +1,5 @@
 import s from "./Section.module.css";
+import PropTypes from "prop-types";
 
 const Section = ({ title, children }) => (
   <section className={s.sectionWrp}>
@@ -7,3 +8,8 @@ const Section = ({ title, children }) => (
   </section>
 );
 export default Section;
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
+};

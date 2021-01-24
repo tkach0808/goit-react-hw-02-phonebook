@@ -22,7 +22,7 @@ export default class BhoneBook extends Component {
 
   uniqueContact = (name) => {
     const { contacts } = this.state;
-    const findeContact = !!contacts.find((contact) => contact.name === name);
+    const findeContact = contacts.some((contact) => contact.name === name);
 
     findeContact && alert("есть уже такой контакт!!!");
 
